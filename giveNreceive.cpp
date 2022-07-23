@@ -45,6 +45,6 @@ double pro(int v, int w) {
 int main()
 {
 	scanf("%d%d", &a, &b);
-		printf("%lf",pro(a, b));
+	printf("%lf",pro(a, b));
     return 0;
 }
