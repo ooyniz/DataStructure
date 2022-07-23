@@ -1,10 +1,10 @@
 // 산 크기 모양
 #include<stdio.h>
 
-int n;
+int n; // 전역 변수
 
 void pro(int v) {
-	printf("%d", v); // 1 , 2, 3, ...
+	printf("%d", v); // 1, 2, 3, ...
 	if (v == n) return;
 	pro(v + 1); 
 	printf("%d", v); // n, n-1, n-2, ...
