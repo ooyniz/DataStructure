@@ -34,3 +34,17 @@ int main()
 	pro(1, 0);	
 	return 0;
 }
+
+// 주고받기 사용
+#include<stdio.h>
+
+int pro(int v, int sum) {
+	if( v == 5 ) return sum + v;
+	return pro(v+1, sum+v);
+}
+
+int main()
+{
+	printf("%d", pro(1, 0));	
+	return 0;
+}
