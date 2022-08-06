@@ -15,7 +15,7 @@ int main()
 
 	for (i = 1; i<=q; i++) { // 1부터 q까지의 질문 받기
     
-		scanf("%d", &m); // 하나씩 입력 받기
+		scanf("%d", &m); // 하나씩 입력 받기 , space bar로 구분하여 입력 (허용되는 규칙)
     
 		int l = 1, r = n, mid; 
     
