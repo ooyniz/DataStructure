@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h> // memset을 사용하기 위해 필요
+#define M 1000010
+
+int p[M];
+
+int find(int x) {
+	if(p[x] == -1) return x;
+	p[x] = find(p[x]);
+	return p[x];
+}
+
+
+int main() 
+{
+	int n, m, i, a, b, k, x, y;
+	scanf("%d%d", &n,&m);
+	memset(p, -1, sizeof(p)); // 배열에 -1를 초기값으로 준다
+	for (i = 1; i <= m; i++) {
+		scanf("%d%d%d", &k,&a,&b);
+		if (k == 0) {
+			x = find(a);
+			y = find(b);
+			if (x != y) // 다른 집합이면 합쳐준다
+				p[x] = y;
+		} else {
+			if (find(a) == find(b)) // 같은 집합이면 Yes, 아니면 No
+				printf("YES\n");
+			else
+				printf("NO\n");
+		}
+	}
+	return 0;
+}
